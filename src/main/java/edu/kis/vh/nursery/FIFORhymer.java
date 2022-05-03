@@ -1,9 +1,15 @@
 package edu.kis.vh.nursery;
 
+/**
+ * Klasa dostarczająca klasyczną wyliczankę oparta o kolejkę First In First Out
+ */
 public class FIFORhymer extends DefaultCountingOutRhymer {
 
     private final DefaultCountingOutRhymer temp = new DefaultCountingOutRhymer();
 
+    /**
+     * @return Metoda countOut odlicza elementy, które zawiera klasa FIFORhymers
+     */
     @Override
     public int countOut() {
         while (!callCheck())
@@ -19,6 +25,9 @@ public class FIFORhymer extends DefaultCountingOutRhymer {
         return ret;
     }
 
+    /**
+     * @return Metoda zwraca tablice elementów temp
+     */
     public DefaultCountingOutRhymer getTemp() {
         return temp;
     }
